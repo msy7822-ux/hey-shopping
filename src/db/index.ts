@@ -8,4 +8,4 @@ const pool = new VercelPool({
   connectionString: process.env.POSTGRES_URL,
 });
 
-export const db = drizzle(pool);
+export const db = drizzle(pool, { logger: true });
